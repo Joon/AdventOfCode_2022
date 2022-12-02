@@ -16,8 +16,7 @@ def score_win(option):
         "A_X": 3, "A_Y": 6, "A_Z": 0,
         "B_X": 0, "B_Y": 3, "B_Z": 6,
         "C_X": 6, "C_Y": 0, "C_Z": 3
-    }    
-    
+    }
     return value_map["{}_{}".format(option[0], option[1])]
 
 def required_move(option):
@@ -31,7 +30,6 @@ def required_move(option):
         # C for Scissors
         "C_X": "Y", "C_Y": "Z", "C_Z": "X"
     }    
-    
     return required_move_map["{}_{}".format(option[0], option[1])]
 
 def required_score(option):
