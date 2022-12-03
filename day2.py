@@ -9,8 +9,8 @@ def score_val(option):
     return move_score_map[option[0]]
 
 def score_win(option):
-    # A for Rock, B for Paper, and C for Scissors
-    # X for Rock, Y for Paper, and Z for Scissors
+    # Them: A for Rock, B for Paper, and C for Scissors
+    # You: X for Rock, Y for Paper, and Z for Scissors
     # outcome of the round (0 if you lost, 3 if the round was a draw, and 6 if you won)
     value_map = {
         "A_X": 3, "A_Y": 6, "A_Z": 0,
