@@ -14,7 +14,6 @@ def match_item3(sss):
         if sss[0][i] in sss[1] and sss[0][i] in sss[2]:
             return sss[0][i]
 
-
 def score(c):
     if c == c.lower():
         return (ord(c) - ord('a')) + 1
