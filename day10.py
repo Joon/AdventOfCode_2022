@@ -19,9 +19,7 @@ def check_reg(cyc, x, print_lines):
     if abs(x - char) <= 1:
         print_lines[line][char] = "#"
 
-print_lines = [["."] * 40, ["."] * 40, ["."] * 40, ["."] * 40, ["."] * 40, ["."] * 40]
-print_lines[0][0] = "#"
-print("\n".join(["".join(l) for l in print_lines]))
+print_lines = [[" "] * 40, [" "] * 40, [" "] * 40, [" "] * 40, [" "] * 40, [" "] * 40]
 
 for c in commands:
     if c[0] == 'noop':
