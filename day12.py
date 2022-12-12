@@ -137,3 +137,9 @@ for n in a_nodes:
         fail_count = fail_count + 1
 print(a_routes)
 print("Answer 2: " + str(min([a for a in a_routes if a > 0])))
+
+for p in shortest_path:
+    grid[p[1]][p[0]] = f"{Fore.GREEN}" + grid[p[1]][p[0]] + f"{Style.RESET_ALL}"
+
+for l in grid:
+    print("".join(l), )
