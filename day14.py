@@ -17,7 +17,7 @@ max_x = max(all_rock_x) + 1
 min_y = 0
 max_y = max(all_rock_y) + 1
 
-print(f"World params: X axis: {min_x} to {max_x}  Y Axis: {min_y} to {max_y}")
+print(f"Starting world params: X axis: {min_x} to {max_x}  Y Axis: {min_y} to {max_y}")
 
 world = {}
 
@@ -71,7 +71,7 @@ def tuple_add(t1, t2):
     return (t1[0] + t2[0], t1[1] + t2[1])
 
 sand_produced = 0
-
+part_1_answer = 0
 
 done = False
 while not done:
@@ -94,7 +94,12 @@ while not done:
                 done = True
         # This sand unit has fallen on to the floor - stop it here
         if current_sand_location[1] == max_y:            
+            if part_1_answer == 0:
+                part_1_answer = sand_produced
             sand_in_motion = False
 
-print_grid(world)
-print("Units of sand produced: " + str(sand_produced))
+print("Part 1: " + str(part_1_answer - 1))
+print("Part 2: " + str(sand_produced))
+print(f"Final world params: X axis: {min_x} to {max_x}  Y Axis: {min_y} to {max_y}")
+
+#print_grid(world)
