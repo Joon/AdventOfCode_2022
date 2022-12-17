@@ -1,6 +1,3 @@
-from itertools import chain
-from itertools import combinations
-
 file = open('day15_input.txt', 'r')
 lines = [s.strip('\n') for s in file.readlines()]
 
