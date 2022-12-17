@@ -176,14 +176,3 @@ if cycle_size > 0:
 else:
     print("Part 2 is not answereable in thousands of years")
 
-
-# too haa    1565518315371
-# Too high:  1565517244500
-# Too high:  1565517244400
-# no answer: 1565517241904 [excel]
-#            1565517241902 [excel 2]
- 
-# no answer: 1565517241681
-# no answer: 1565517239796
-# no answer: 1565517241370
-             
