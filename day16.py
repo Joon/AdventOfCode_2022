@@ -123,13 +123,6 @@ print("Path count", len(all_paths))
 max_flow = 0
 print("Calculating max flow achieved in each path")
 
-best_path = 'AA|FA|GA|HA|IA|JA|KA|LA|MA|NA|OA|PA'
-for p in all_paths:
-    if "|".join(p).replace("*", "") == best_path:
-        print(p)
-        print(path_time(p))
-        break
-
 for p in all_paths:    
     if path_flow(p) > max_flow:
         max_flow = path_flow(p)
