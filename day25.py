@@ -39,12 +39,13 @@ def decimal_to_snafu(decimal):
         powers_of_five[poors] = power_val
 
     # The SNAFU format requires that the power of 5 get transferred to the next power of 5 for values
-    # greater than 2, because it does not allow the numbers 4 or 3 to be represented. Therefore, we
-    # walk through from the smallest to largest power of 5, and if the value is greater than 2, we
-    # increment the next power of 5, and decrement the current power of 5 by 5.
+    # greater than 2, because it does not allow the numbers 4 or 3 to be represented, instead requiring
+    # the differences to be represented by - (-1) or = (-2). Therefore, we walk through from the smallest
+    # to largest power of 5, and if the value is greater than 2, we increment the next power of 5, and 
+    # decrement the current power of 5 by 5.
     # For example:
-    # decimal 20 in powers of 5 is 0 ones and 4 fives
-    # because 4 is not allowed, this becomes 1 25's and -1 5's
+    # decimal 20 in powers of 5 is 0 ones and 4 fives (10)
+    # because 4 is not allowed, this becomes 1 25's and -1 5's (1-0)
     for p, val in enumerate(powers_of_five):
         if p == len(powers_of_five) - 1:
             break
